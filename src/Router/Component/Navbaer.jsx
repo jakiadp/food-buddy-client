@@ -1,9 +1,19 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Navbaer = () => {
-    return (
-        <div>
-            <div className="navbar bg-base-100 shadow-sm">
+
+const link = <>
+ 
+ <NavLink to='/' className='hover:text-orange-500 hover:underline' >Home</NavLink>
+ <NavLink to='/about' className='hover:text-orange-500 hover:underline' >About</NavLink>
+
+
+</>
+
+  return (
+    <div>
+      <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -11,41 +21,31 @@ const Navbaer = () => {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        className="menu menu-sm gap-5 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+         {link}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">FoodBuddy</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
+    <ul className="menu menu-horizontal px-1 gap-5">
+     {link}
+         </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end gap-5">
+    <NavLink to='/login' > <button type="button" className='btn btn-primary'>Log In</button> </NavLink>
+        <NavLink to='/register' > <button type="button" className='btn btn-primary'>Sing Up</button> </NavLink>
   </div>
-</div>
+
+  {/* <div className="w-10 rounded-full">
+          <img
+            alt="Tailwind CSS Navbar component"
+            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
         </div>
-    );
+         */}
+</div>
+    </div>
+  );
 };
 
 export default Navbaer;
