@@ -1,14 +1,16 @@
 import React from 'react';
-import Navbaer from '../Router/Component/Navbaer';
+
 import { Outlet } from 'react-router';
-import Footer from '../Router/Component/Footer';
+import Navbaer from '../Component/Navber';
+import Footer from '../Component/Footer';
 
 const Root = () => {
     return (
-        <div>
+        <div className='w-11/12 mx-auto '>
             <Navbaer></Navbaer>
             <Outlet></Outlet>
             <Footer></Footer>
+            
          </div>
     );
 };
