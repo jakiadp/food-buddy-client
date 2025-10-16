@@ -25,7 +25,7 @@ const link = <>
          {link}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">FoodBuddy</a>
+    <a className=" text-2xl  font-bold ">FoodBuddy</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 gap-5">
@@ -33,8 +33,8 @@ const link = <>
          </ul>
   </div>
   <div className="navbar-end gap-5">
-    <NavLink to='/login' > <button type="button" className='btn btn-primary'>Log In</button> </NavLink>
-        <NavLink to='/register' > <button type="button" className='btn btn-primary'>Sing Up</button> </NavLink>
+    <NavLink to='/login' > <button type="button" className='px-6 p-2 text-xl   rounded-md text-white bg-orange-400 hover:bg-orange-500 '>Log In</button> </NavLink>
+        <NavLink to='/register' > <button type="button" className='px-6 p-2 text-xl  rounded-md text-white bg-orange-400 hover:bg-orange-500'>Sing Up</button> </NavLink>
   </div>
 
   {/* <div className="w-10 rounded-full">
