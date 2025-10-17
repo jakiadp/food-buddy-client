@@ -5,10 +5,12 @@ import FaSection from '../Component/FaSection';
 import TakeSection from '../Component/TakeSection';
 
 
+
 const Home = () => {
     return (
         <div className='space-y-20'>
             <Bannar></Bannar>
+            
             <TakeSection></TakeSection>
             <FaSection></FaSection>
             <ExploreSection></ExploreSection>
