@@ -26,7 +26,7 @@ const link = <>
       </ul>
     </div>
     <div className='flex gap-2'>
-        <img src={image} className='bg-orange-600 h-10 w-10 rounded-full' alt="" />
+        <img src={image} className='bg-orange-600 h-10 w-10 m-2 p-2 rounded-full' alt="" />
         <a className=" text-2xl  font-bold ">FoodBuddy</a>
     </div>
   </div>
