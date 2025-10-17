@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router';
-
+import image from '../assets/image/logo.png'
 const Navbaer = () => {
 
 const link = <>
@@ -25,7 +25,10 @@ const link = <>
          {link}
       </ul>
     </div>
-    <a className=" text-2xl  font-bold ">FoodBuddy</a>
+    <div className='flex gap-2'>
+        <img src={image} className='bg-orange-600 h-10 w-10 rounded-full' alt="" />
+        <a className=" text-2xl  font-bold ">FoodBuddy</a>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 gap-5">
@@ -48,4 +51,4 @@ const link = <>
   );
 };
 
-export default Navbaer;
+export default Navbaer;   
