@@ -1,6 +1,6 @@
 import React from 'react';
-import image from '../assets/image/ErrorImg.jpg';
 import { Link } from 'react-router';
+import image from '../assets/image/Error.jpg'
 const Error = () => {
     return (
         <div className='text-center '>
