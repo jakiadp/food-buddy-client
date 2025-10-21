@@ -1,8 +1,12 @@
+import { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../Contexts/AuthContext/Authcontext";
 
 
 const Register = () => {
   
+const {createUser} = use(AuthContext)
+
 const handleRegister = e =>{
   e.preventDefault() ;
   const form = e.target;
@@ -11,6 +15,18 @@ const handleRegister = e =>{
   const photo = form.photo.value;
   const password = form.password.value;
   console.log(name, email, password, photo);
+
+// createuser
+
+createUser(email, password)
+.then(result =>{
+  console(result.user)
+})
+  .catch((error) => {
+    console.log(error)
+    // ..
+  });
+
 }
 
     return (

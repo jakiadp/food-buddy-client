@@ -2,8 +2,8 @@ import React from 'react';
 import image from '../assets/image/diverse-people-refugee-camps.jpg'
 const About = () => {
     return (
-          <div className=''>
-            <h1 className='text-5xl text-black font-bold mb-2'>Take Action</h1>
+          <div className='mt-20'>
+            <h1 className='text-5xl text-orange-500 font-bold mb-2'>Take Action</h1>
 			<p>Your generous donation helps us continue our mission to make a positive impact in the community. Every contribution, big or small, <br />
 			 supports important projects and initiatives that improve lives, provide essential resources, and bring hope to those in need.
 
