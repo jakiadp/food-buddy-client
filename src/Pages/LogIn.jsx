@@ -2,6 +2,19 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const LogIn = () => {
+
+
+	const handleLogIn = e =>{
+  e.preventDefault() ;
+  const form = e.target;
+  
+  const email = form.email.value;
+  
+  const password = form.password.value;
+  console.log(email, password);
+}
+
+
     return (
                 <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
       <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10  bg-gray-50  text-gray-800">
@@ -9,7 +22,7 @@ const LogIn = () => {
 		<h1 className="my-3 text-4xl font-bold">Log in</h1>
 		<p className="text-sm  text-gray-600">Sign in to access your account</p>
 	</div>
-	<form noValidate="" action="" className="space-y-12">
+	<form onSubmit={handleLogIn} noValidate="" action="" className="space-y-12">
 		<div className="space-y-4">
 			<div>
 				<label htmlFor="email" className="block mb-2 text-sm text-start">Email address</label>
