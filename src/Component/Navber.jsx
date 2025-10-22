@@ -1,7 +1,39 @@
-import React from 'react';
+import React, { use } from 'react';
 import { NavLink } from 'react-router';
 import image from '../assets/image/logo.png'
+import { AuthContext } from '../Contexts/AuthContext/Authcontext';
+import Swal from 'sweetalert2';
+
+
 const Navbaer = () => {
+const {user, logOut} =use(AuthContext);
+
+
+const handleLogOut = () => {
+  Swal.fire({
+    title: 'Are you sure?',
+    text: "You will be logged out!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',  // "Yes" button
+    cancelButtonColor: '#d33',      // "No" button
+    confirmButtonText: 'Yes, log out',
+    cancelButtonText: 'No, stay logged in'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      logOut()
+        .then(() => {
+          console.log('Signed out successfully');
+          Swal.fire('Logged out!', 'You have been signed out.', 'success');
+        })
+        .catch(error => {
+          console.log(error);
+          Swal.fire('Error', 'Something went wrong during logout.', 'error');
+        });
+    }
+  });
+};
+
 
 const link = <>
  
@@ -36,9 +68,16 @@ const link = <>
          </ul>
   </div>
   <div className="navbar-end gap-5">
-    <NavLink to='/login' > <button type="button" className='px-6 p-2 text-xl   rounded-md text-white bg-orange-400 hover:bg-orange-500 '>Log In</button> </NavLink>
+   {
+    user ? <button type='button' onClick={handleLogOut} className='px-6 p-2 text-xl   rounded-md text-white bg-orange-400 hover:bg-orange-500 '>Log Out</button>
+    :
+    <>
+     <NavLink to='/login' > <button type="button" className='px-6 p-2 text-xl   rounded-md text-white bg-orange-400 hover:bg-orange-500 '>Log In</button> </NavLink>
         <NavLink to='/register' > <button type="button" className='px-6 p-2 text-xl  rounded-md text-white bg-orange-400 hover:bg-orange-500'>Sing Up</button> </NavLink>
-  </div>
+
+    </>
+   }
+</div>
 
   {/* <div className="w-10 rounded-full">
           <img

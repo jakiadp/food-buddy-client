@@ -1,33 +1,53 @@
 import { use } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../Contexts/AuthContext/Authcontext";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
   
 const {createUser} = use(AuthContext)
 
-const handleRegister = e =>{
-  e.preventDefault() ;
+
+const handleRegister = e => {
+  e.preventDefault();
   const form = e.target;
   const name = form.name.value;
   const email = form.email.value;
   const photo = form.photo.value;
   const password = form.password.value;
+
   console.log(name, email, password, photo);
 
-// createuser
+  // Create user
+  createUser(email, password)
+    .then(result => {
+      console.log(result.user);  // ✅ Fixed the typo (was console())
 
-createUser(email, password)
-.then(result =>{
-  console(result.user)
-})
-  .catch((error) => {
-    console.log(error)
-    // ..
-  });
+      // Show success alert
+      Swal.fire({
+        title: 'Successfully Registered!',
+        text: `${name}, your account has been created.`,
+        icon: 'success',
+        confirmButtonText: 'OK'
+      });
 
-}
+      // Optionally reset the form
+      form.reset();
+    })
+    .catch((error) => {
+      console.log(error);
+
+      // Show error alert
+      Swal.fire({
+        title: 'Registration Failed',
+        text: error.message,
+        icon: 'error',
+        confirmButtonText: 'Try Again'
+      });
+    });
+};
+
 
     return (
          <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
