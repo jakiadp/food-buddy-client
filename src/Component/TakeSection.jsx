@@ -1,9 +1,15 @@
 import React from 'react';
 import  image  from '../assets/image/diverse-people-refugee-camps.jpg';
+import { motion } from "motion/react"
 const TakeSection = () => {
     return (
          <div className=''>
-            <h1 className='text-5xl text-black font-bold mb-2'>Take Action</h1>
+            <motion.h1 
+         initial={{ scale: 0.5 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+            
+            className='text-5xl text-black font-bold mb-2'>Take Action</motion.h1>
             <p>Simply browse through our fundraising goals and donate to the causes that matter to you.</p>
                   <section className=" bg-gray-100  text-gray-800 my-10 rounded-xl" >
         <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">

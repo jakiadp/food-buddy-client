@@ -1,5 +1,6 @@
 import React from 'react';
 import banarImg from '../assets/image/little-children.jpg'
+import { motion } from "motion/react"
 const Bannar = () => {
     return (
         <div>
@@ -13,7 +14,16 @@ const Bannar = () => {
   <div className="hero-overlay"></div>
   <div className="hero-content text-neutral-content text-center">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Fight hunger with <br /> FoodBuddy</h1>
+      <motion.h1 
+                animate={{ scale: [1, 1.2, 1] }} // Scale up and down
+        transition={{
+          duration: 2,      // Total time for one cycle
+          repeat: Infinity, // Loop forever
+          ease: 'easeInOut' // Smooth in and out
+        }}
+
+      
+       className="mb-5 text-5xl font-bold">Fight hunger with <br /> FoodBuddy</motion.h1>
       <p className="mb-5">
         With just a few clicks, you can donate to someone in need, and the United Nations World Food Programme will deliver the meals. Together, we can make a difference.
       </p>

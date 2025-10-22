@@ -1,6 +1,6 @@
 import React from 'react';
 import image from '../assets/image/2childern.jpg'
-
+import { motion } from "motion/react"
 const ExploreSection = () => {
     return (
         <div className='w-11/12 mx-auto'>
@@ -11,7 +11,11 @@ const ExploreSection = () => {
 		</div>
 		<div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
 			<h1 className="text-5xl font-bold leading-none sm:text-6xl">
-				<span className=" text-orange-400">FoodBuddy</span> 
+				<motion.span 
+     initial={{ scale: 0.5 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+className=" text-orange-400">FoodBuddy</motion.span> 
 			</h1>
 			<p className="mt-6 mb-8 text-lg sm:mb-12">Food Buddy Is a Most Charity/ Non-profit/ Fundraising/ NGO organizations.
                  <br /> Now Be aHand Is a Biggest organizations In This Globe.</p>

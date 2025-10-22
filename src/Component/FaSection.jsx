@@ -1,11 +1,17 @@
 import React from 'react';
-
+import { motion } from "motion/react"
 const FaSection = () => {
     return (
         <div>
 <section className=" bg-gray-100  text-gray-800">
 	<div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
-		<h2 className="text-2xl font-semibold sm:text-4xl">Frequently Asked Questions</h2>
+		<motion.h2
+		         initial={{ scale: 0.5 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+
+
+		className="text-2xl font-semibold sm:text-4xl">Frequently Asked Questions</motion.h2>
 		<p className="mt-4 mb-8  text-gray-600">Sagittis tempor donec id vestibulum viverra. Neque condimentum primis orci at lacus amet bibendum.</p>
 		<div className="space-y-4">
 			<details className="w-full border rounded-lg">
