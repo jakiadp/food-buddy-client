@@ -15,6 +15,10 @@ const AuthProvider = ({children}) => {
 
   };
 
+  const onAuthStateChanged = () =>{
+
+  } ;
+
   const logInUser = ( email, password,) =>{
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password)
