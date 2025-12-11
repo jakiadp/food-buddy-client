@@ -10,12 +10,12 @@ import Hotfood from '../Component/Hotfood';
 
 const Home = () => {
 
-  const foodsPromise = fetch('http://localhost:3000/foods').then(res => res.json())
+const foodsPromise = fetch('http://localhost:3000/foods').then(res => res.json());
 
     return (
         <div className='space-y-20'>
             <Bannar></Bannar>
-            <Hotfood jobPromise={foodsPromise}></Hotfood>
+            <Hotfood foodsPromise={foodsPromise}></Hotfood>
             
             <TakeSection></TakeSection>
             <FaSection></FaSection>

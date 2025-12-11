@@ -1,10 +1,10 @@
 import React, { use } from 'react';
 
-const Hotfood = ({foodPromise}) => {
-    const foods =use(foodPromise);
+const Hotfood = ({foodsPromise}) => {
+    const foods =use(foodsPromise);
     return (
         <div>
-            {foods.lenth}
+            {foods.length}
         </div>
     );
 };
