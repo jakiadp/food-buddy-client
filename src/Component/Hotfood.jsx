@@ -4,8 +4,10 @@ const Hotfood = ({foodsPromise}) => {
     const foods =use(foodsPromise);
     return (
         <div>
-            {foods.length}
-        </div>
+        
+        <h1>{foods.length}</h1>
+          
+      </div>
     );
 };
 
