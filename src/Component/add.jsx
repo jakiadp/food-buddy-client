@@ -5,6 +5,8 @@ const add = () => {
         <div>
             <h1>amar sonar bangla
                 <p>ami tomay</p>
+                ami koi achi koi jamu
+                
                 
             </h1>
         </div>
