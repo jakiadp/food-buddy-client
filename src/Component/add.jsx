@@ -6,6 +6,8 @@ const add = () => {
             <h1>amar sonar bangla
                 <p>ami tomay</p>
                 ami koi achi koi jamu
+                am keo ke niya vbi nah allah ja rakhche amar kopale tai hobe
+                
                 
                 
             </h1>
