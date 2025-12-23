@@ -12,8 +12,8 @@ const Hotfood = ({ foodsPromise }) => {
 
   return (
     <div>
-      <h2 className='text-4xl font-semibold'>Available Food of the Day </h2>
-     <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2'>
+      <h2 className='text-4xl font-semibold mb-20'>Available Foods of the Day </h2>
+     <div className='grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4'>
       {
         foods.map(food => <FoodCard key={food._id}
                                     food={food}></FoodCard>)
