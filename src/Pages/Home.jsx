@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Bannar from '../Component/Bannar';
 import ExploreSection from '../Component/ExploreSection';
 import FaSection from '../Component/FaSection';
@@ -15,7 +15,9 @@ const foodsPromise = fetch('http://localhost:3000/foods').then(res => res.json()
     return (
         <div className='space-y-20'>
             <Bannar></Bannar>
-            <Hotfood foodsPromise={foodsPromise}></Hotfood>
+            <Suspense fallback={'Loading Foods'}>
+                <Hotfood foodsPromise={foodsPromise}></Hotfood>
+            </Suspense>
             
             <TakeSection></TakeSection>
             <FaSection></FaSection>
