@@ -5,6 +5,7 @@ import About from "../Pages/About";
 import Register from "../Pages/Register";
 import LogIn from "../Pages/LogIn";
 import Error from "../Component/Error";
+import FoodDetails from "../Pages/FoodDetails/FoodDetails";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ export const router = createBrowserRouter([
         {
             path:'/about',
             Component:About
+        },
+
+        {
+         path:'/foods/:id',
+         Component:FoodDetails
         },
         {
             path:'/register',
