@@ -6,6 +6,8 @@ import Register from "../Pages/Register";
 import LogIn from "../Pages/LogIn";
 import Error from "../Component/Error";
 import FoodDetails from "../Pages/FoodDetails/FoodDetails";
+import PrivateRoute from "../Routes/PrivateRoute";
+import FoodApply from "../Pages/FoodApply/FoodApply";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +27,12 @@ export const router = createBrowserRouter([
          path:'/foods/:id',
          Component:FoodDetails,
          loader:({params}) => fetch(`http://localhost:3000/foods/${params.id}`)
+        },
+        {
+            path:'/foodApply/:id',
+            element: <PrivateRoute>
+                <FoodApply></FoodApply>
+            </PrivateRoute>
         },
         {
             path:'/register',

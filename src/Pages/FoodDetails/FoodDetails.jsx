@@ -63,7 +63,7 @@ const FoodDetails = () => {
               <p><strong>Email:</strong> {donor?.donor_email}</p>
             </div>
           </div>
-         <Link> <button className="w-full btn btn-pramary">Request Button</button></Link>
+         <Link to={`/foodApply/${_id}`}> <button className="w-full btn btn-pramary">Request Button</button></Link>
         </div>
       </div>
     </div>
