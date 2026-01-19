@@ -1,10 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import useAuth from '../../Hooks/UseAuth';
 
 const FoodApply = () => {
 
-const params = useParams();
-console.log(params);
+const {id: jobId} = useParams();
+const {user} = useAuth();
+console.log(jobId,user);
 
 
     return (
