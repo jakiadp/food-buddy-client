@@ -6,6 +6,7 @@ const FoodApply = () => {
 
 const {id: jobId} = useParams();
 const {user} = useAuth();
+
 console.log(jobId,user);
 
 
