@@ -13,6 +13,7 @@ console.log(jobId,user);
     return (
         <div>
             <h3 className='text-4xl'>Food Apply</h3>
+            <h2>         food  buddy is comming soon </h2>
         </div>
     );
 };
