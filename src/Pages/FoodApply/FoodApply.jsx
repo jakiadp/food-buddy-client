@@ -16,6 +16,7 @@ console.log(jobId,user);
             <h2>         food  buddy is comming soon </h2>
             h2
             <h2>ami achi onek dure</h2>
+            ami koi jabo bani
             <h1>tumi koi tum,i nai ami tomake cai</h1>
         </div>
     );
