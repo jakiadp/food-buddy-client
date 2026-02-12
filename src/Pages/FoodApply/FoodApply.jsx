@@ -17,6 +17,7 @@ console.log(jobId,user);
             h2
             <h2>ami achi onek dure
                 tumi koi sadi
+                ajke no kaj ajke vote
             </h2>
             ami koi jabo bani
             <h1>tumi koi tum,i nai ami tomake cai</h1>
