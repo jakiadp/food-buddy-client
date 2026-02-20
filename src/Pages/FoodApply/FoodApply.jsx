@@ -17,6 +17,7 @@ console.log(jobId,user);
             h2
             <h2>ami achi onek dure
                 tumi koi sadi
+                tumi koi tui .
                 ajke no kaj ajke vote
                 pabo ki pabo nah tomake to jani nah.
                 tobu tomar preame ami porechi beche theke jeno morechi
@@ -27,6 +28,7 @@ console.log(jobId,user);
 
             ami kormu
             <h1>tumi koi tum,i nai ami tomake cai</h1>
+            <h2>h1</h2>
         </div>
     );
 };
