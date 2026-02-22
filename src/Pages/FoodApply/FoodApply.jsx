@@ -25,10 +25,10 @@ console.log(jobId,user);
             ami koi jabo bani
             ki kori bollo nah
             AMRA BOROY KHAB
-
+      ami kobe je sucese hobo
             ami kormu
             <h1>tumi koi tum,i nai ami tomake cai</h1>
-            <h2>h1</h2>
+            <h2>h1x </h2>
         </div>
     );
 };
